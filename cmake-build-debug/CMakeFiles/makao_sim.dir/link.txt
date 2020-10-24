@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/makao_sim.dir/main.cpp.o  -o makao_sim 

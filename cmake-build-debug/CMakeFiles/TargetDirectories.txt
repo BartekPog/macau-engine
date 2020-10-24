@@ -1,3 +1,0 @@
-/home/bart/code/cpp/makao-sim/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/bart/code/cpp/makao-sim/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/bart/code/cpp/makao-sim/cmake-build-debug/CMakeFiles/makao_sim.dir
