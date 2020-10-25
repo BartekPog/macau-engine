@@ -89,20 +89,17 @@ public:
         LinkedListEl<T> * currentNode;
         friend LinkedList;
     public:
-        explicit Iterator(const LinkedList <T>& l){
-            std::cout<<"l.head"<<l.head;
+        explicit Iterator(const LinkedList <T> & l){
             currentNode = l.head;
         };
         explicit Iterator(LinkedListEl <T> * head): currentNode(head){};
 
 
         bool finished(){
-            std::cout<<"Testing element ";
             return currentNode == nullptr;
         }
 
         Iterator & operator ++(){
-            std::cout<<"OBJ:"<<currentNode->getValue();
             if (currentNode)
                 currentNode = currentNode -> getNext();
             return *this;

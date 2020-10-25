@@ -14,8 +14,11 @@ void unitTest() {
     for (const auto &s : {1,2,3,4})
         list.pushFront(s);
 
-    for (LinkedList<int>::Iterator it(list); !it.finished(); ++it)
-        std::cout<<*it;
+    int i = 4;
+    for (LinkedList<int>::Iterator it(list); !it.finished(); ++it){
+        assert(i == *it);
+        i--;
+    }
 
     assert(list.isIn(4));
 
@@ -33,7 +36,7 @@ void unitTest() {
     for (const auto &s : {"raz", "cztery"})
         l2.pushBack(s);
 
-    assert(l.removeMatching(l2) == 2);
+    assert( l.removeMatching(l2)== 2);
     assert(l.getLength()==2);
     assert(l.isIn("dwa"));
     assert(l.isIn("trzy"));

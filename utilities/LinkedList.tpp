@@ -12,14 +12,6 @@ void LinkedList<T>::pushFront(const T &element) {
     if (!length)
         tail = head;
     length++;
-
-    LinkedListEl<T> * tmp = head;
-    while(tmp)
-    {
-        std::cout<<tmp->getValue()<<" ";
-        tmp = tmp->getNext();
-    }
-    std::cout<<std::endl;
 }
 
 template <typename T>
@@ -67,12 +59,11 @@ int  LinkedList<T>::removeMatching(const T &element) {
 template<typename T>
 int LinkedList<T>::removeMatching(const LinkedList& list) {
 
-    for (LinkedList<T>::Iterator it(this->head); !it.finished(); ++it)
-    {
-        removeMatching(*it);
-    }
+    int deleted = 0;
+    for (LinkedList<T>::Iterator it(list); !it.finished(); ++it)
+        deleted += this->removeMatching(*it);
 
-    return 0;
+    return deleted;
 }
 
 template<typename T>
@@ -111,11 +102,10 @@ T LinkedList<T>::getTop() {
 
 template<typename T>
 bool LinkedList<T>::isIn(const T &element) {
-    for (LinkedList<T>::Iterator it(this->head); !it.finished(); it++)
+    for (LinkedList<T>::Iterator it(*this); !it.finished(); it++)
     {
         if( *it == element)
             return true;
-        std::cout<<"Testing element: "<<*it<<std::endl;
     }
 
     return false;

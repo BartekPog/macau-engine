@@ -28,12 +28,11 @@ public:
     LinkedListEl(const T val, LinkedListEl<T>* pNext): next(pNext){ //value(new T(val))
         value = new T(val);
     };
-//    explicit LinkedListEl(T val): value(new T(val)), next(nullptr){};
 
     T getValue() const {
         if(value)
             return *value;
-        std::cout<<"ERROR: WRONG ELEMENT ACCESS";
+        std::cerr<<"ERROR: WRONG ELEMENT ACCESS";
         return {0};
     }
 
