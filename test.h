@@ -6,9 +6,12 @@
 #include <cassert>
 #include <iostream>
 #include "utilities/LinkedList.h"
+#include <vector>
 
-
-void unitTest() {
+/** Ensures Linked List works correctly
+ *
+ */
+void testLinkedList() {
     LinkedList<int> list;
 
     for (const auto &s : {1,2,3,4})
@@ -36,11 +39,18 @@ void unitTest() {
     for (const auto &s : {"raz", "cztery"})
         l2.pushBack(s);
 
-    assert( l.removeMatching(l2)== 2);
+    assert( l.removeMatching(l2) == 2);
     assert(l.getLength()==2);
     assert(l.isIn("dwa"));
     assert(l.isIn("trzy"));
     assert(!l.isIn("raz"));
     assert(!l.isIn("cztery"));
+}
 
-};
+
+/** Ensures all functions work correctly
+ *
+ */
+void unitTest() {
+    testLinkedList();
+}

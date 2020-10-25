@@ -6,6 +6,8 @@
 #ifndef MAKAO_SIM_LINKEDLISTEL_H
 #define MAKAO_SIM_LINKEDLISTEL_H
 
+#include <iostream>
+
 /* Template element of the linked list class
  *
  */
