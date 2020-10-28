@@ -17,6 +17,7 @@ public:
         : Card(_suit, _symbol), delay{_delay}, pull(_pull), forward(_forward){};
 
     void execute(Player *prev, Player *current, Player *next) override;
+    void selfRestore() override {};
 };
 
 

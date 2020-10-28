@@ -12,4 +12,4 @@ file(GLOB SOURCES
 
 
 include_directories("${PROJECT_SOURCE_DIR}" )
-add_executable(makao_sim main.cpp ${SOURCES} interface/MainInterface.cpp interface/MainInterface.h Players/Player.cpp Players/Player.h game/Cards/Card.cpp game/Cards/Card.h game/Cards/AgroCard.cpp game/Cards/AgroCard.h)
+add_executable(makao_sim main.cpp ${SOURCES} interface/MainInterface.cpp interface/MainInterface.h Players/Player.cpp Players/Player.h game/Cards/Card.cpp game/Cards/Card.h game/Cards/AgroCard.cpp game/Cards/AgroCard.h game/Cards/BasicCard.h)
