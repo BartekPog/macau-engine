@@ -34,6 +34,7 @@ public:
     void setDelay(int);
     void executeDelay();
     int getDelay() const;
+    ~Player();
 };
 
 

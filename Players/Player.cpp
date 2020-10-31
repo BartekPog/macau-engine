@@ -65,5 +65,10 @@ int Player::getDelay() const {
     return delays;
 }
 
+Player::~Player() {
+    for (LinkedList<Card *>::Iterator it(hand); !it.finished(); ++it)
+        delete (*it);
+}
+
 
 

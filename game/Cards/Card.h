@@ -58,6 +58,7 @@ public:
 
     virtual void selfRestore() =0;          ///< Method restoring the card to basic state
     virtual void execute(Player* prev, Player* current, Player* next)=0;               ///< Method executing the extra card actions
+    virtual ~Card()=default;
 };
 
 

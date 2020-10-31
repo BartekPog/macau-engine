@@ -111,7 +111,7 @@ T LinkedList<T>::getTail() {
 }
 
 template<typename T>
-T LinkedList<T>::getTop() {
+T LinkedList<T>::getHead() {
     if(head)
         return head->getValue();
     std::cerr<<"ERROR: Accessing head of an empty list"<<std::endl;

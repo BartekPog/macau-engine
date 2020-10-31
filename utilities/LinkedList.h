@@ -66,7 +66,7 @@ public:
      *
      * @return top element
      */
-    T getTop();
+    T getHead();
 
     /** Returns last element if exists
      *
