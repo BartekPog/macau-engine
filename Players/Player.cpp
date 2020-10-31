@@ -49,4 +49,21 @@ int Player::getPull() const {
     return pulls;
 }
 
+void Player::addDelay(int additional) {
+    delays += additional;
+}
+
+void Player::setDelay(int newDelays) {
+    delays = newDelays;
+}
+
+void Player::executeDelay() {
+    delays--;
+}
+
+int Player::getDelay() const {
+    return delays;
+}
+
+
 

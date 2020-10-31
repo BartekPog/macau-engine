@@ -26,6 +26,24 @@ void LinkedList<T>::pushBack(const T & element){
 }
 
 template<typename T>
+void LinkedList<T>::insert(const T &element, int position) {
+    position = std::min(length, position);
+
+    if (position == 0)
+        pushFront(element);
+    else if (position == length)
+        pushBack(element);
+    else{
+        LinkedListEl<T> *runner = head;
+        for (int i=0; i< position - 1; i++)
+            runner=runner->getNext();
+
+        runner->setNext(new LinkedListEl<T>(element, runner->getNext()));
+        length++;
+    }
+}
+
+template<typename T>
 int  LinkedList<T>::removeMatching(const T &element) {
     if (!head)
         return 0;
@@ -129,5 +147,6 @@ int LinkedList<T>::clearList() {
     length = 0;
     return tempLen;
 }
+
 
 #endif

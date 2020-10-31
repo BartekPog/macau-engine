@@ -33,7 +33,7 @@ public:
     void addDelay(int);
     void setDelay(int);
     void executeDelay();
-    int getDelay();
+    int getDelay() const;
 };
 
 

@@ -35,7 +35,7 @@ public:
         if(value)
             return *value;
         std::cerr<<"ERROR: WRONG ELEMENT ACCESS";
-        return {0};
+        return {};
     }
 
     void setValue(T newValue) {

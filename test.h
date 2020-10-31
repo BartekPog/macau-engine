@@ -22,8 +22,10 @@ void testLinkedList() {
         assert(i == *it);
         i--;
     }
-
     assert(list.isIn(4));
+
+    list.insert(7, 3);
+    assert(list.isIn(7));
 
     LinkedList<std::string> l;
 

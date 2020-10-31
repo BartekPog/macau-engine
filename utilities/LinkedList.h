@@ -8,13 +8,14 @@
 
 #include "LinkedListEl.h"
 #include <iostream>
+#include <stdexcept>
 
 /** Template Linked List with extra functions and parameters
  *
  * @tparam T Type of the elements
  */
 template<typename T>
-class LinkedList { //TODO Ogarnąć dodawania po indeksie do shuffle in
+class LinkedList { //TODO konstruktor kopiujący chyba będzie potrzebny
 public:
     LinkedListEl <T> * head = nullptr;  ///< Head of the list
     LinkedListEl <T> * tail = nullptr;  ///< Tail of the list
@@ -34,6 +35,13 @@ public:
      * @param element
      */
     void pushBack(const T& element);
+
+    /** Inserts one element at a given position
+     *
+     * @param element the inserted element
+     * @param position position in the list
+     */
+    void insert(const T& element, int position);
 
     /** Removes matching elements in the list
      *
