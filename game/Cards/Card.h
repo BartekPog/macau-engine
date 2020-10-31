@@ -43,8 +43,15 @@ public:
     const Symbol symbol;                    ///< Symbol, value of the card
     LinkedList<Symbol> matchingSymbols;     ///< List of matching symbols
     LinkedList<Suit> matchingSuits;         ///< List of matching suits
+    const int delay;
+    const int pull;
 
-    Card(Suit _suit, Symbol _symbol): suit(_suit), symbol(_symbol){
+    Card(Suit _suit, Symbol _symbol): suit(_suit), symbol(_symbol), delay(0), pull(0){
+        matchingSuits.pushFront(suit);
+        matchingSymbols.pushFront(symbol);
+    };
+
+    Card(Suit _suit, Symbol _symbol, int _delay, int _pull): suit(_suit), symbol(_symbol), delay(_delay), pull(_pull){
         matchingSuits.pushFront(suit);
         matchingSymbols.pushFront(symbol);
     };

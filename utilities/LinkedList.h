@@ -14,8 +14,7 @@
  * @tparam T Type of the elements
  */
 template<typename T>
-class LinkedList {
-
+class LinkedList { //TODO Ogarnąć dodawania po indeksie do shuffle in
 public:
     LinkedListEl <T> * head = nullptr;  ///< Head of the list
     LinkedListEl <T> * tail = nullptr;  ///< Tail of the list
@@ -72,7 +71,7 @@ public:
      * @param element element to check if present
      * @return the last element
      */
-    bool isIn(const T& element);
+    bool isIn(const T& element) const;
 
     /** List length getter
      *

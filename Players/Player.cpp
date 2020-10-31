@@ -12,29 +12,41 @@ bool Player::canStack(const Card &first, const Card &second) {
     return first.symbol == second.symbol;
 }
 
+
+bool Player::doesMatchBasic(const Card &laying, const Card &putting) {
+    return ((laying.matchingSymbols.isIn(putting.symbol)) || (laying.matchingSuits.isIn(putting.suit)));
+}
+
 bool Player::doesMatch(const Card &laying, const Card &putting) {
-    if (pulls > 0 && delays > 0){
+    if (pulls > 0 || delays > 0){
         if(putting.symbol == queen && putting.suit == spades)
             return true;
     }
 
     else if (delays > 0){
-        if (putting.symbol == Symbol::four)
-            if((putting.symbol == laying.symbol) || (putting.suit == laying.suit))
-                return true;
-        if(putting.symbol == queen && putting.suit == spades)
+        if ((putting.delay > 0) && doesMatchBasic(laying, putting))
             return true;
     }
 
     else if (pulls > 0){
-        if(putting.symbol == queen && putting.suit == spades)
+        if((putting.delay > 0) && doesMatchBasic(laying, putting)){
             return true;
-        if((putting.symbol == laying.symbol) || (putting.suit == laying.suit))
-            switch (putting.symbol){
-                //TODO
         }
     }
 
-    return false;
+    return doesMatchBasic(laying, putting);
 }
+
+void Player::addPull(int additional) {
+    pulls += additional;
+}
+
+void Player::setPull(int newPulls) {
+    pulls = newPulls;
+}
+
+int Player::getPull() const {
+    return pulls;
+}
+
 

@@ -9,12 +9,10 @@
 
 class AgroCard: public Card {
 private:
-    int delay;
-    int pull;
     bool forward = true;
 public:
     AgroCard(Suit _suit, Symbol _symbol, int _delay, int _pull, bool _forward=true)
-        : Card(_suit, _symbol), delay{_delay}, pull(_pull), forward(_forward){};
+        : Card(_suit, _symbol, _delay, _pull), forward(_forward){};
 
     void execute(Player *prev, Player *current, Player *next) override;
     void selfRestore() override {};

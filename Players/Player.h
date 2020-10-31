@@ -22,15 +22,17 @@ private:
     LinkedList<Card*> hand;
 public:
     bool didWin();
-    virtual LinkedList<Card>*choose(LinkedList<Card*> cards, int playersNumber, int playersHandsLengths[]);//TODO Argumenty
+    virtual LinkedList<Card>*choose(LinkedList<Card*> cards, int playersNumber, int playersHandsLengths[])=0;//TODO Argumenty
     bool doesMatch(const Card & laying, const Card & putting);
+    static bool doesMatchBasic(const Card & laying, const Card & putting);
     bool canStack(const Card & first, const Card & second);
-    void pullCards();
+    void pullCards(); //TODO Po implementacji Decka
     void addPull(int);
     void setPull(int);
-    int getPull();
+    int getPull() const;
     void addDelay(int);
     void setDelay(int);
+    void executeDelay();
     int getDelay();
 };
 

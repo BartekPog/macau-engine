@@ -101,7 +101,7 @@ T LinkedList<T>::getTop() {
 }
 
 template<typename T>
-bool LinkedList<T>::isIn(const T &element) {
+bool LinkedList<T>::isIn(const T &element) const {
     for (LinkedList<T>::Iterator it(*this); !it.finished(); it++)
     {
         if( *it == element)
