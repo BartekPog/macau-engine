@@ -22,7 +22,7 @@ private:
     LinkedList<Card*> hand;
 public:
     bool didWin();
-    virtual LinkedList<Card>*choose();//TODO Argumenty
+    virtual LinkedList<Card>*choose(LinkedList<Card*> cards, int playersNumber, int playersHandsLengths[]);//TODO Argumenty
     bool doesMatch(const Card & laying, const Card & putting);
     bool canStack(const Card & first, const Card & second);
     void pullCards();

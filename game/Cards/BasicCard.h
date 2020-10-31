@@ -14,6 +14,7 @@ public:
 
     void execute(Player *prev, Player *current, Player *next) override {};
     void selfRestore() override {};
+
 };
 
 

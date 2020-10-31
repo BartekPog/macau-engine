@@ -116,4 +116,18 @@ int LinkedList<T>::getLength() {
     return length;
 }
 
+template<typename T>
+int LinkedList<T>::clearList() {
+    while (head){
+        LinkedListEl<T>* tmp = head->getNext();
+        delete head;
+        head=tmp;
+    }
+
+    tail = nullptr;
+    int tempLen = length;
+    length = 0;
+    return tempLen;
+}
+
 #endif

@@ -80,6 +80,12 @@ public:
      */
     int getLength();
 
+    /** Deletes all the list elements
+     *
+     * @return number of deleted elements
+     */
+    int clearList();
+
 
     /** Class custom iterator
      *
