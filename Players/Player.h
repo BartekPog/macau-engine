@@ -5,11 +5,15 @@
 #ifndef MAKAO_SIM_PLAYER_H
 #define MAKAO_SIM_PLAYER_H
 
-#include <iostream>
+
 #include "../utilities/LinkedList.h"
-#include "../game/Cards/Card.h"
+//#include "../game/Cards/Card.h"
+#include "../game/Deck.h"
+
+#include <iostream>
 
 class Card;
+class Deck;
 
 /** Base virtual player/algorithm class
  *
@@ -26,7 +30,7 @@ public:
     bool doesMatch(const Card & laying, const Card & putting);
     static bool doesMatchBasic(const Card & laying, const Card & putting);
     bool canStack(const Card & first, const Card & second);
-    void pullCards(); //TODO Po implementacji Decka
+    void pullCard(Deck& deck);
     void addPull(int);
     void setPull(int);
     int getPull() const;

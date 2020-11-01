@@ -7,14 +7,13 @@
 
 #include "Card.h"
 
-class BasicCard : public Card{
+class BasicCard : public Card {
 public:
     BasicCard(Suit _suit, Symbol _symbol)
     : Card(_suit, _symbol){};
 
-    void execute(Player *prev, Player *current, Player *next) override {};
+    Punishments execute(Punishments p) override {return p;};
     void selfRestore() override {};
-
 };
 
 

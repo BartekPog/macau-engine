@@ -10,7 +10,7 @@
 class Jack:public Card {
 public:
     explicit Jack(Suit _suit): Card(_suit, jack){};
-    void execute(Player *prev, Player *current, Player *next) override {};
+    Punishments execute(Punishments p) override {return p;};
     void selfRestore() override;
 
     void setRequest(Symbol requestedSymbol);

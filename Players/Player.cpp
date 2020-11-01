@@ -70,5 +70,11 @@ Player::~Player() {
         delete (*it);
 }
 
+void Player::pullCard(Deck & deck) {
+    Card * tmp = deck.PullOne();
+    if (tmp)
+        hand.pushFront(tmp);
+}
+
 
 

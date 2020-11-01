@@ -3,17 +3,17 @@
 // Created by bart on 25.10.2020.
 //
 
+
 #ifndef MAKAO_SIM_CARD_H
 #define MAKAO_SIM_CARD_H
 
-#include "../../utilities/LinkedList.h"
-#include "../../Players/Player.h"
 
-class Player;
+#include "../../utilities/LinkedList.h"
+//#include "../../Players/Player.h"
+#include "../Punishments.h"
 
 enum Symbol {
     ace,
-    one,
     two,
     three,
     four,
@@ -34,6 +34,8 @@ enum Suit {
     spades,
     diamonds
 };
+
+
 /** Card virtual base class
  *
  */
@@ -57,7 +59,7 @@ public:
     };
 
     virtual void selfRestore() =0;          ///< Method restoring the card to basic state
-    virtual void execute(Player* prev, Player* current, Player* next)=0;               ///< Method executing the extra card actions
+    virtual Punishments execute(Punishments)=0;    ///< Method executing the extra card actions
     virtual ~Card()=default;
 };
 

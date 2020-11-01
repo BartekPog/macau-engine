@@ -10,11 +10,10 @@
 class Ace: public Card {
 public:
     explicit Ace(Suit _suit): Card(_suit, ace){};
-    void execute(Player *prev, Player *current, Player *next) override {};
+    Punishments execute(Punishments p) override {return p;};
 
     void selfRestore() override;
     void setRequest(Suit requestedSuit);
-
 };
 
 

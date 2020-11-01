@@ -4,12 +4,17 @@
 
 #include "AgroCard.h"
 
-void AgroCard::execute(Player *prev,Player *current,Player *next) {
-    Player* actedUpon = (forward ? next : prev);
+Punishments AgroCard::execute(Punishments punishments) {//TODO
+    if(forward){
+        punishments.nextDelays+=punishments.currentDelays;
+        punishments.nextPulls+=punishments.currentPulls;
+    }
+    else{
+        punishments.prevDelays+=punishments.currentDelays;
+        punishments.prevPulls+=punishments.currentPulls;
+    }
 
-    actedUpon->addPull(current->getPull());
-    current->setPull(0);
-
-    actedUpon->addDelay(current->getDelay());
-    current->setDelay(0);
+    punishments.currentPulls = 0;
+    punishments.currentDelays = 0;
+    return punishments;
 }

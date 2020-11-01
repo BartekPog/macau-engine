@@ -4,7 +4,8 @@
 
 #include "QueenOfSpades.h"
 
-void QueenOfSpades::execute(Player *prev, Player *current, Player *next) {
-    current -> setPull(0);
-    current -> setDelay(0);
+Punishments QueenOfSpades::execute(Punishments punishments) {
+    punishments.currentDelays =0;
+    punishments.currentPulls =0;
+    return punishments;
 }

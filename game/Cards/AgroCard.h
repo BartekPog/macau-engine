@@ -14,7 +14,7 @@ public:
     AgroCard(Suit _suit, Symbol _symbol, int _delay, int _pull, bool _forward=true)
         : Card(_suit, _symbol, _delay, _pull), forward(_forward){};
 
-    void execute(Player *prev, Player *current, Player *next) override;
+    Punishments execute(Punishments) override;
     void selfRestore() override {};
 };
 

@@ -11,7 +11,7 @@ class QueenOfSpades: public Card {
 public:
     QueenOfSpades(): Card(spades, queen){};
 
-    void execute(Player *prev, Player *current, Player *next) override;
+    Punishments execute(Punishments) override;
     void selfRestore() override {};
 };
 
