@@ -19,11 +19,11 @@ class Deck;
  *
  */
 class Player {
-private:
-    const std::string name;
+protected:
+    std::string name;
     int delays = 0;
     int pulls = 0;
-    LinkedList<Card*> hand;
+    LinkedList<Card*> hand = LinkedList<Card*>();
 public:
     bool didWin();
     void makeMove(LinkedList<Card*>* cardsStack, int playersNumber, int playersHandsLengths[], Player * previousPlayer, Player * nextPlayer, Deck& deck);
@@ -45,11 +45,12 @@ public:
     void pullCard(Deck& deck);
     void addPull(int);
     void setPull(int);
-    int getPull() const;
+    [[nodiscard]] int getPull() const;
     void addDelay(int);
     void setDelay(int);
     void executeDelay();
-    int getDelay() const;
+    [[nodiscard]] int getDelay() const;
+    [[nodiscard]] std::string getName() const;
     ~Player();
 
 };

@@ -154,3 +154,7 @@ Player::makeMove(LinkedList<Card *>* cardsStack, int playersNumber, int *players
 
     delete chosenListPtr;
 }
+
+std::string Player::getName() const {
+    return name;
+}
