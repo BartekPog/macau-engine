@@ -9,7 +9,7 @@ Deck::Deck(int seed) {
 
     // Basic cards
     for (auto suit : {clubs, hearts, spades, diamonds})
-        for (auto symbol : {four, five, six, seven, eight, nine, ten})
+        for (auto symbol : {five, six, seven, eight, nine, ten})
             shuffleIn(new BasicCard(suit, symbol));
 
     // pasive kings

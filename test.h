@@ -6,6 +6,7 @@
 #include <cassert>
 #include <iostream>
 #include "utilities/LinkedList.h"
+#include "game/Deck.h"
 #include <vector>
 
 /** Ensures Linked List works correctly
@@ -49,10 +50,18 @@ void testLinkedList() {
     assert(!l.isIn("cztery"));
 }
 
+/** Ensure Deck builds with no issues
+ *
+ */
+void buildDeck(){
+    Deck(42);
+}
+
 
 /** Ensures all functions work correctly
  *
  */
 void unitTest() {
     testLinkedList();
+    buildDeck();
 }
