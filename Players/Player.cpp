@@ -4,7 +4,7 @@
 
 #include "Player.h"
 
-bool Player::didWin() {
+bool Player::didWin() const {
     return (hand.length == 0);
 }
 
@@ -157,4 +157,8 @@ Player::makeMove(LinkedList<Card *>* cardsStack, int playersNumber, int *players
 
 std::string Player::getName() const {
     return name;
+}
+
+int Player::getHandLength() const {
+    return hand.length;
 }

@@ -25,7 +25,7 @@ protected:
     int pulls = 0;
     LinkedList<Card*> hand = LinkedList<Card*>();
 public:
-    bool didWin();
+    [[nodiscard]] bool didWin() const;
     void makeMove(LinkedList<Card*>* cardsStack, int playersNumber, int playersHandsLengths[], Player * previousPlayer, Player * nextPlayer, Deck& deck);
 
     /** Overridable method for choosing the cards. Cards shold be layed out in such order that the first card touching the card stack
@@ -50,6 +50,7 @@ public:
     void setDelay(int);
     void executeDelay();
     [[nodiscard]] int getDelay() const;
+    [[nodiscard]] int getHandLength() const;
     [[nodiscard]] std::string getName() const;
     ~Player();
 

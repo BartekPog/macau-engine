@@ -14,10 +14,6 @@ public:
     };
 
     LinkedList<Card *> * choose(LinkedList<Card *> *cardsStack, int playersNumber, int *playersHandsLengths) override;
-
-//    ~PlayerPlaceholder() {
-//        this->~Player();
-//    }
 };
 
 

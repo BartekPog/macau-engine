@@ -7,6 +7,7 @@
 #include <iostream>
 #include "utilities/LinkedList.h"
 #include "game/Deck.h"
+#include "game/Game.h"
 #include <vector>
 
 /** Ensures Linked List works correctly
@@ -57,6 +58,16 @@ void buildDeck(){
     Deck(42);
 }
 
+/** Ensure Game builds with no issues and terminates due to limit
+ *
+ */
+void buildGame(){
+    LinkedList<std::string> a;
+    for(auto s: {"placeholder", "placeholder"})
+        a.pushFront(s);
+    Game game(42,100, a);
+    assert(game.play() == -1);
+}
 
 /** Ensures all functions work correctly
  *
@@ -64,4 +75,5 @@ void buildDeck(){
 void unitTest() {
     testLinkedList();
     buildDeck();
+    buildGame();
 }

@@ -99,6 +99,7 @@ void LinkedList<T>::popHead() {
         LinkedListEl<T>* tmp = head->getNext();
         delete head;
         head=tmp;
+        length--;
     }
 }
 

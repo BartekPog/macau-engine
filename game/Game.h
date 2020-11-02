@@ -13,11 +13,16 @@
 
 class Game {
 private:
+    const int maxGameLength;
     Player **players;           ///< Array of Players
     int playersNumber;
     Deck deck;
+    LinkedList<Card*>*cardsStack;
+
+    [[nodiscard]] int toPlayerIndex(int moveNumber) const;
+
 public:
-    Game(int randomSeed, LinkedList<std::string>& playerNames);
+    Game(int randomSeed, int maxGameLength, LinkedList<std::string>& playerNames);
     int play();
     ~Game();
 };
