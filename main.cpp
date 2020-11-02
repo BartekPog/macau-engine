@@ -1,9 +1,12 @@
 #include <iostream>
 #include "utilities/LinkedList.h"
 #include "test.h"
+
+#include "interface/MainInterface.h"
+
 int main() {
     unitTest();
-
-    std::cout << "Hello, World!" << std::endl;
+    MainInterface interface;
+    interface.runSimulation();
     return 0;
 }

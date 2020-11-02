@@ -22,6 +22,8 @@ Game::Game(int randomSeed, const int maxGameLength, LinkedList<std::string> &pla
         }
     }
 
+    assert(i==playersNumber);
+
     // Init hands
     for (int cardNum=0; cardNum < 5; cardNum++){
         for (int playerId=0; playerId<playersNumber; playerId++)

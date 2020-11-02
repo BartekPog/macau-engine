@@ -5,8 +5,8 @@
 #ifndef MAKAO_SIM_GAME_H
 #define MAKAO_SIM_GAME_H
 
-#include "../Players/Player.h"
-#include "../Players/algorithms/PlayerPlaceholder.h"
+#include "../players/Player.h"
+#include "../players/algorithms/PlayerPlaceholder.h"
 #include "../utilities/LinkedList.h"
 /// ALGORITHMS
 
@@ -14,7 +14,7 @@
 class Game {
 private:
     const int maxGameLength;
-    Player **players;           ///< Array of Players
+    Player **players;           ///< Array of players
     int playersNumber;
     Deck deck;
     LinkedList<Card*>*cardsStack;
