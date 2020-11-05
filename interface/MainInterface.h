@@ -7,6 +7,7 @@
 
 #include "../utilities/LinkedList.h"
 #include "../players/algorithms/PlayerPlaceholder.h"
+#include "../players/algorithms/AdvancedPlaceholder.h"
 #include "../game/Game.h"
 #include <sstream>
 #include <string>

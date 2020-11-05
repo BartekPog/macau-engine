@@ -7,6 +7,7 @@
 
 #include "../players/Player.h"
 #include "../players/algorithms/PlayerPlaceholder.h"
+#include "../players/algorithms/AdvancedPlaceholder.h"
 #include "../utilities/LinkedList.h"
 /// ALGORITHMS
 

@@ -11,7 +11,7 @@ Game::Game(int randomSeed, const int maxGameLength, LinkedList<std::string> &pla
     players = new Player* [playersNumber];
     int i=0;
     for (LinkedList<std::string>::Iterator it(playerNames); !it.finished(); ++it){
-        for (Player * player: {new PlayerPlaceholder}){
+        for (Player * player: {(Player *)new PlayerPlaceholder, (Player* )new AdvancedPlaceholder}){
             if (*it == player->getName()){
                 players[i] = player;
                 i++;
@@ -32,6 +32,15 @@ Game::Game(int randomSeed, const int maxGameLength, LinkedList<std::string> &pla
 
     // Init cards stack
     cardsStack = new LinkedList<Card*>;
+
+    Card * topCard;
+
+    do{
+        topCard = deck.PullOne();
+        deck.shuffleIn(topCard);
+    }while (dynamic_cast<BasicCard*>(topCard));
+
+    cardsStack->pushFront(topCard);
 }
 
 Game::~Game() {

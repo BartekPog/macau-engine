@@ -39,6 +39,13 @@ public:
      */
     virtual LinkedList<Card*>*choose(LinkedList<Card*>* cardsStack, int playersNumber, int playersHandsLengths[])=0;
 
+    /** Checks if a card can be placed on a card stack
+     *  It takes into consideration the user state
+     *
+     * @param laying Card laying on the top of the stack
+     * @param putting Card willing to be put on the stack
+     * @return true if card can be put
+     */
     bool doesMatch(const Card * laying, const Card * putting) const;
     static bool doesMatchBasic(const Card * laying, const Card * putting);
     bool canStack(const Card * first, const Card * second);

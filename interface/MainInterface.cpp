@@ -46,7 +46,7 @@ void MainInterface::initPlayersNames() {
 }
 
 MainInterface::MainInterface() {
-    for (Player* player: {new PlayerPlaceholder}){
+    for (Player* player: {(Player*)new PlayerPlaceholder, (Player*)new AdvancedPlaceholder}){
         possibleNames.pushFront(player->getName());
         delete player;
     }
@@ -92,7 +92,7 @@ void MainInterface::runSimulation() {
 
         int i=0;
         for (LinkedList<std::string>::Iterator it(playersNames); !it.finished(); ++it){
-            printf("%15s:\t%.2f\n", (*it).c_str(), (float)wins[i]/(float)gamesFinished);
+            printf("%15s:\t%.2f%% \n", (*it).c_str(), 100.0*(float)wins[i]/(float)gamesFinished);
             i++;
         }
 
