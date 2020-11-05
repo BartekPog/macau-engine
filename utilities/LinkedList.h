@@ -15,7 +15,7 @@
  * @tparam T Type of the elements
  */
 template<typename T>
-class LinkedList { //TODO konstruktor kopiujący chyba będzie potrzebny
+class LinkedList {
 public:
     LinkedListEl <T> * head = nullptr;  ///< Head of the list
     LinkedListEl <T> * tail = nullptr;  ///< Tail of the list

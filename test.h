@@ -10,9 +10,7 @@
 #include "game/Game.h"
 #include <vector>
 
-/** Ensures Linked List works correctly
- *
- */
+/** Ensures Linked List works correctly */
 void testLinkedList() {
     LinkedList<int> list;
 
@@ -51,16 +49,12 @@ void testLinkedList() {
     assert(!l.isIn("cztery"));
 }
 
-/** Ensure Deck builds with no issues
- *
- */
+/** Ensure Deck builds with no issues */
 void buildDeck(){
     Deck(42);
 }
 
-/** Ensure Game builds with no issues and terminates due to limit
- *
- */
+/** Ensure Game builds with no issues and terminates due to limit */
 void buildGame(){
     LinkedList<std::string> a;
     for(auto s: {"placeholder", "placeholder"})
@@ -69,9 +63,7 @@ void buildGame(){
     assert(game.play() == -1);
 }
 
-/** Ensures all functions work correctly
- *
- */
+/** Ensures all functions work correctly */
 void unitTest() {
     testLinkedList();
     buildDeck();

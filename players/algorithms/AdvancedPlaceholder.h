@@ -1,3 +1,4 @@
+/** @file */
 //
 // Created by bart on 05.11.2020.
 //
@@ -7,6 +8,7 @@
 
 #include "../Player.h"
 
+/** Advanced algorithm placeholder */
 class AdvancedPlaceholder: public Player {
 public:
     AdvancedPlaceholder(){

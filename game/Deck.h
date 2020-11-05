@@ -1,3 +1,4 @@
+/** @file */
 //
 // Created by bart on 31.10.2020.
 //
@@ -16,13 +17,11 @@
 #include <cassert>
 
 
-/** Class representing the deck of cards in a game
- *
- */
+/** Class representing the deck of cards in a game */
 class Deck {
 private:
-    LinkedList<Card*> cards;
-    std::mt19937 rand_engine;
+    LinkedList<Card*> cards;         ///< List of pointersto the cards in the deck
+    std::mt19937 rand_engine;        ///< Random number engine for generating random cards
 public:
     /** Deck main construrctor
      *

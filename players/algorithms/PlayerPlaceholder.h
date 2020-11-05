@@ -1,3 +1,4 @@
+/** @file */
 //
 // Created by bart on 01.11.2020.
 //
@@ -6,7 +7,7 @@
 #define MAKAO_SIM_PLAYERPLACEHOLDER_H
 
 #include "../Player.h"
-
+/** Basic algorithm placeholder */
 class PlayerPlaceholder : public Player {
 public:
     PlayerPlaceholder(){

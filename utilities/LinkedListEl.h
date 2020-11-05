@@ -8,9 +8,7 @@
 
 #include <iostream>
 
-/* Template element of the linked list class
- *
- */
+/* Template element of the linked list class */
 template <typename T>
 class LinkedListEl {
 private:
